@@ -1,0 +1,43 @@
+.navbar{
+
+
+
+}
+
+.gradiente {
+    background: linear-gradient(90deg, rgba(251,19,19,1) 0%, rgba(93,9,121,1) 45%, rgba(0,212,255,1) 100%);   
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    font-size: x-large;
+}
+
+.titulo{
+
+    font-weight: 600;
+}
+
+.drop{
+
+    display: flex;
+    justify-content: flex-end;
+    padding: 1%;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    margin: 2%;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+}
+
+.container img{
+
+    border-radius: 100%;
+    width: 40%;
+    
+}
