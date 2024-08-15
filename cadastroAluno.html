@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Controle de estudantes</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: #f0f0f0; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+        <div class="container-fluid">
+            <div>
+            <a class="navbar-brand gradiente" href="paginaInicial.html">CONTROLE</a><a class="navbar-brand titulo" href="paginaInicial.html">de Estudantes</a>
+        </div>
+            <span class="navbar-text">
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#" style="font-weight: 500;">Cadastrar:</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="cadastroAluno.html">Alunos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">|</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="cadastroSala.html">Sala</a>
+                        </li>
+                    </ul>
+                </div>
+            </span>
+        </div>
+    </nav>
+
+    <div class="cadastro">
+
+        <legend style="display: flex; justify-content: center; font-weight: 600;">CADASTRAR NOVO ALUNO</legend>
+        
+        <div style="display: flex; justify-content: center;">
+            <img id="imgFoto"src="imagens/user.png" onclick="UploadImg()" alt="Upload Image" style="cursor: pointer;">
+            <input type="file" id="fileInput" style="display: none"; accept="image/*">
+        </div>
+        
+        <form class="cadastros">
+            <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Nome</label>
+            </div>
+            <input type="text" class="form-control " id="exampleInputEmail1" aria-describedby="emailHelp">
+            
+            <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Idade</label>
+            </div>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            
+            <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Sexo</label>
+            </div>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            
+            <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Sala</label>
+            </div>
+            <div class="mb-3">
+                <select id="disabledSelect" class="form-select">
+                <option>TI</option>
+                <option>Manufatura</option>
+                <option>Cibersitemas</option>
+                </select>
+            </div>
+
+
+            <button type="submit" class="btn btn-primary" style="margin-top: 3%;">CADASTRAR</button>
+        </form>
+
+    </div>
+    <script src="cadastroAluno.js"></script>
+</body>
+
+</html>
