@@ -87,9 +87,10 @@ legend{
 
 .cadastro img {
 
-    width: 30%;
+    width: 150px;
     border-radius: 100%;
-    height: auto;
+    height: 150px;
     border: 2px solid;
+    object-fit: cover;
 }
 
