@@ -6,6 +6,10 @@ const cadastro = require('./src/controllers/cadastro');
 
 route.get('/', home.pagInicialget);
 
-module.exports = route;
+route.get('/cadastroAluno', cadastro.aluno);
+route.post('/cadastroAluno', cadastro.alunoInsert);
 
-route.post('/cadastroSala', cadastro.salaInsert);
+route.get('/cadastroSala', cadastro.sala);
+route.post('/cadastroSala', cadastro.salaInsert); 
+
+module.exports = route;

@@ -38,45 +38,48 @@
     <div class="cadastro">
 
         <legend style="display: flex; justify-content: center; font-weight: 600;">CADASTRAR NOVO ALUNO</legend>
-        
-        <div style="display: flex; justify-content: center;">
-            <img id="imgFoto"src="imagens/user.png" onclick="UploadImg()" alt="Upload Image" style="cursor: pointer;">
-            <input type="file" id="fileInput" style="display: none"; accept="image/*">
+         
+            <form class="cadastros" action="/cadastroAluno" method="post">
+                
+                <div style="display: flex; justify-content: center;">
+                    <img id="imgFoto" src="./imagens/user.png" alt="Upload Image" style="cursor: pointer;">
+                    <input type="file" id="flImage" name="foto" accept="image/*" style="display: none;">
+                </div>
+               
+                <div class="mb-3">
+                <label for="nome" class="form-label">Nome</label>
+                </div>
+                <input type="text" class="form-control " id="nome" aria-describedby="emailHelp" name="nome">
+                
+                <div class="mb-3">
+                <label for="idade" class="form-label">Idade</label>
+                </div>
+                <input type="text" class="form-control" id="idade" aria-describedby="emailHelp" name="idade">
+                
+                <div class="mb-3">
+                <label for="sexo" class="form-label">Sexo</label>
+                </div>
+                <input type="text" class="form-control" id="sexo" aria-describedby="emailHelp" name="sexo">
+                
+                <div class="mb-3">
+                <label for="sala" class="form-label">Sala</label>
+                </div>
+                
+                <div class="mb-3">
+                    <select id="disabledSelect" class="form-select" id="sala" name="sala" >
+                    <option>TI</option>
+                    <option>Manufatura</option>
+                    <option>Cibersitemas</option>
+                    </select>
+                </div>
+    
+    
+                <button type="submit" class="btn btn-primary" style="margin-top: 3%;">CADASTRAR</button>
+            </form>
+    
         </div>
-        
-        <form class="cadastros">
-            <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Nome</label>
-            </div>
-            <input type="text" class="form-control " id="exampleInputEmail1" aria-describedby="emailHelp">
-            
-            <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Idade</label>
-            </div>
-            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            
-            <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Sexo</label>
-            </div>
-            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            
-            <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Sala</label>
-            </div>
-            <div class="mb-3">
-                <select id="disabledSelect" class="form-select">
-                <option>TI</option>
-                <option>Manufatura</option>
-                <option>Cibersitemas</option>
-                </select>
-            </div>
 
-
-            <button type="submit" class="btn btn-primary" style="margin-top: 3%;">CADASTRAR</button>
-        </form>
-
-    </div>
-    <script src="cadastroAluno.js"></script>
+    <script src="js/cadastroAluno.js"></script>
 </body>
 
 </html>

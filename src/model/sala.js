@@ -1,7 +1,8 @@
 const Sequelize = require('sequelize')
 const database = require('../config/bd');
 
-const sala = database.define('Sala', {
+const sala = database.define('Salas', {
+    
     IDSala:{
         type: Sequelize.INTEGER,
         autoIncrement: true,
