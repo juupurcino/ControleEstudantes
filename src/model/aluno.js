@@ -33,5 +33,6 @@ aluno.belongsTo(sala, {
     foreignKey: 'IDSala'
 });
 
+// top ne 
 module.exports = aluno;
 
