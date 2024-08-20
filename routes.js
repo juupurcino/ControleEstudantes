@@ -4,7 +4,8 @@ const route = express.Router();
 const home = require('./src/controllers/home');
 const cadastro = require('./src/controllers/cadastro');
 
-route.get('/', home.pagInicialget);
+route.get('/', home.pagInicialGet);
+route.post('/', home.pagInicialPost);
 
 route.get('/cadastroAluno', cadastro.aluno);
 route.post('/cadastroAluno', cadastro.alunoInsert);
