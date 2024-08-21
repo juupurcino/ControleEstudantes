@@ -23,9 +23,9 @@ const aluno = database.define('Aluno', {
         allowNull: false
     },
     Foto: {
-        type: Sequelize.STRING(50),
+        type: Sequelize.STRING(500),
         allowNull: false
-        }
+    }
 });
 
 aluno.belongsTo(sala, {
@@ -33,6 +33,5 @@ aluno.belongsTo(sala, {
     foreignKey: 'IDSala'
 });
 
-// top ne 
 module.exports = aluno;
 

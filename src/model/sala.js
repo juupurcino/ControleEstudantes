@@ -2,8 +2,8 @@ const Sequelize = require('sequelize')
 const database = require('../config/bd');
 
 const sala = database.define('Salas', {
-    
-    IDSala:{
+
+    IDSala: {
         type: Sequelize.INTEGER,
         autoIncrement: true,
         allowNull: false,

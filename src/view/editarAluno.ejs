@@ -10,6 +10,7 @@
 </head>
 
 <body>
+
     <nav class="navbar navbar-expand-lg bg-body-tertiary"
         style="background-color: #f0f0f0; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
         <div class="container-fluid">
@@ -39,53 +40,51 @@
         </div>
     </nav>
 
-    <div class="cadastro">
+    <div class="edit-box cadastro">
+        <legend style="display: flex; justify-content: center; font-weight: 600;">EDITAR INFORMAÇÕES DE ALUNO</legend>
 
-        <legend style="display: flex; justify-content: center; font-weight: 600;">CADASTRAR NOVO ALUNO</legend>
+        <form action="/editarAluno/<%= alunos.IDAluno %>" method="post" enctype="multipart/form-data">
 
-        <form action="/cadastroAluno" method="post" enctype="multipart/form-data">
-
-            <div style="display: flex; justify-content: center;">
-                <img id="imgFoto" src="./imagens/user.png" alt="Upload Image" style="cursor: pointer;">
+            <div class="max-width" style="display: flex; justify-content: center;">
+                <div class="image-container">
+                    <img src="/imagens/<%= alunos.Foto %>" alt="Selecione uma imagem" id="imgFoto"
+                        style="cursor: pointer;">
+                </div>
                 <input type="file" id="flImage" name="foto" accept="image/*" style="display: none;">
             </div>
 
             <div class="mb-3">
                 <label for="nome" class="form-label">Nome</label>
-            </div>
-            <input type="text" class="form-control " id="nome" aria-describedby="emailHelp" name="nome">
-
-            <div class="mb-3">
-                <label for="idade" class="form-label">Idade</label>
-            </div>
-            <input type="text" class="form-control" id="idade" aria-describedby="emailHelp" name="idade">
-
-            <div class="mb-3">
-                <label for="sexo" class="form-label">Sexo</label>
-            </div>
-            <input type="text" class="form-control" id="sexo" aria-describedby="emailHelp" name="sexo">
-
-            <div class="mb-3">
-                <label for="sala" class="form-label">Sala</label>
+                <input type="text" class="form-control " aria-describedby="emailHelp" value="<%= alunos.Nome %>" name="nome">
             </div>
 
             <div class="mb-3">
-                <select id="disabledSelect" class="form-select" id="sala" name="sala" required>
+                <label for="nome" class="form-label">Idade</label>
+                <input type="text" class="form-control " aria-describedby="emailHelp" value="<%= alunos.Idade %>" name="idade">
+            </div>
+
+            <div class="mb-3">
+                <label for="nome" class="form-label">Sexo</label>
+                <input type="text" class="form-control " aria-describedby="emailHelp" value="<%= alunos.Sexo %>" name="sexo">
+            </div>
+
+            <div class="user-box">
+                <label style="margin-top: 2%;">Sala</label>
+                <select id="sala" name="sala" class="form-select">
                     <% for (let i=0; i<salas.length; i++) { %>
-                        <option value='<%= salas[i].IDSala %>'>
+                        <option value='<%= salas[i].IDSala %>' <%=alunos.IDSala==salas[i].IDSala ? 'selected' : '' %>>
                             <%= salas[i].Nome %>
                         </option>
                         <% } %>
                 </select>
             </div>
-
-
-            <button type="submit" class="btn btn-primary" style="margin-top: 3%;">CADASTRAR</button>
+            <input class="btn btn-primary" type="submit" value="Atualizar" style="margin-top: 2%;" />
         </form>
-
     </div>
 
-    <script src="js/cadastroAluno.js"></script>
+    <script src="/js/cadastroAluno.js"></script>
+
 </body>
+
 
 </html>

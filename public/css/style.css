@@ -1,28 +1,28 @@
-body{
+body {
     background-color: #fafafa;
 }
 
 .gradiente {
-    background: linear-gradient(90deg, rgba(251,19,19,1) 0%, rgba(93,9,121,1) 45%, rgba(0,212,255,1) 100%);   
+    background: linear-gradient(90deg, rgba(251, 19, 19, 1) 0%, rgba(93, 9, 121, 1) 45%, rgba(0, 212, 255, 1) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 700;
     font-size: x-large;
 }
 
-.titulo{
+.titulo {
 
     font-weight: 600;
 }
 
-.drop{
+.drop {
 
     display: flex;
     justify-content: flex-end;
     padding: 1%;
 }
 
-h1{
+h1 {
     display: flex;
     justify-content: center;
     margin: 2%;
@@ -33,27 +33,30 @@ h6 {
     margin: 1%;
 }
 
-.center{
+.center {
     display: flex;
     justify-content: center;
 }
 
-.container img{
+.container img {
 
     border-radius: 100%;
     width: 40%;
     border: 2px solid;
-    
+    width: 128px;
+    height: 128px;
+    object-fit: cover
+
 }
 
-.card{
+.card {
 
     padding: 5%;
     display: flex;
     align-items: center;
 }
 
-.formulario{
+.formulario {
 
     display: flex;
     margin: 1%;
@@ -61,7 +64,7 @@ h6 {
     align-items: center;
 }
 
-.cadastro{
+.cadastro {
     margin-top: 5%;
     margin-left: 35%;
     margin-right: 35%;
@@ -69,18 +72,18 @@ h6 {
     background-color: white;
 }
 
-.mb-3{
+.mb-3 {
 
     margin-bottom: 0% !important;
     margin-top: 2%;
 }
 
-.cadastros{
+.cadastros {
     padding: 5%;
     padding-top: 0% !important;
 }
 
-legend{
+legend {
     padding: 5%;
     margin: 0%;
 }
@@ -94,3 +97,7 @@ legend{
     object-fit: cover;
 }
 
+form {
+
+    padding: 2%;
+}
