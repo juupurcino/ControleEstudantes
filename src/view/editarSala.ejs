@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Controle de estudantes</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary"
+        style="background-color: #f0f0f0; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+        <div class="container-fluid">
+            <div>
+                <a class="navbar-brand gradiente" href="/">CONTROLE</a><a class="navbar-brand titulo" href="/">de
+                    Estudantes</a>
+            </div>
+            <span class="navbar-text">
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#"
+                                style="font-weight: 500;">Cadastrar:</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/cadastroAluno">Alunos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">|</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/cadastroSala">Sala</a>
+                        </li>
+                    </ul>
+                </div>
+            </span>
+        </div>
+    </nav>
+
+    <div class="edit-box cadastro">
+
+        <legend style="display: flex; justify-content: center; font-weight: 600;">EDITAR SALA</legend>
+
+        <form action="/editarSala/<%= salas.IDSala %>" method="post" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="nome" class="form-label">Nome</label>
+                <input type="text" class="form-control " id="nome" name="nome" aria-describedby="emailHelp" value="<%= salas.Nome %>">
+            </div>
+
+            <div class="mb-3">
+                <label for="capacidade" class="form-label">Capacidade</label>
+                <input type="text" class="form-control" id="capacidade" name="capacidade" aria-describedby="emailHelp" <%= alunos.Capacidade %>>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="margin-top: 3%;">EDITAR</button>
+        </form>
+
+    </div>
+
+    <script src="/js/cadastroAluno.js"></script>
+
+</body>
+
+
+</html>

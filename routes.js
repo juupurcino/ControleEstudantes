@@ -22,7 +22,9 @@ route.get('/cadastroAluno', cadastro.aluno);
 route.post('/cadastroAluno', multer(config).single('foto'), cadastro.alunoInsert);
 
 route.get('/editarAluno/:id', editar.alunos);
-route.post('/editarAluno/:id', multer(config).single('foto'), editar.adicionar);
+route.post('/editarAluno/:id', multer(config).single('foto'), editar.adicionarAluno);
 
+route.get('/editarSala/:id', editar.salas);
+route.post('/editarSala/:id', editar.adicionarSala);
 
 module.exports = route;
