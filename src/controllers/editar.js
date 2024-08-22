@@ -37,7 +37,7 @@ module.exports = {
                 { where: { IDAluno: id } }
             );
         }
-        
+
         // Dando upgrade nas novas informações
         await aluno.update({
             Nome: dados.nome,
@@ -62,15 +62,15 @@ module.exports = {
             raw: true, //Retorna os somente os valores de uma tabela, sem os metadados
             attributes: ['IDSala', 'Nome', 'Capacidade']
         });
-        const alunos = await aluno.findAll({ raw: true, attributes: ['IDAluno', 'Nome'] });
-        res.render('../view/editarSala', { alunos, salas });
+
+        res.render('../view/editarSala', { salas });
     },
 
     async adicionarSala(req, res) {
         const dados = req.body;
         const id = req.params.id;
 
-    
+
         // Dando upgrade nas novas informações
         await sala.update({
             Nome: dados.nome,

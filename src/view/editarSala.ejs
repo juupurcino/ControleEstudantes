@@ -44,23 +44,21 @@
 
         <legend style="display: flex; justify-content: center; font-weight: 600;">EDITAR SALA</legend>
 
-        <form action="/editarSala/<%= salas.IDSala %>" method="post" enctype="multipart/form-data">
+        <form class="cadastros" action="/editarSala/<%= salas.IDSala %>" method="post">
             <div class="mb-3">
                 <label for="nome" class="form-label">Nome</label>
                 <input type="text" class="form-control " id="nome" name="nome" aria-describedby="emailHelp" value="<%= salas.Nome %>">
-            </div>
+            </div>jk
 
             <div class="mb-3">
                 <label for="capacidade" class="form-label">Capacidade</label>
-                <input type="text" class="form-control" id="capacidade" name="capacidade" aria-describedby="emailHelp" <%= alunos.Capacidade %>>
+                <input type="text" class="form-control" id="capacidade" name="capacidade" aria-describedby="emailHelp" value="<%= salas.Capacidade %>">
             </div>
 
-            <button type="submit" class="btn btn-primary" style="margin-top: 3%;">EDITAR</button>
+            <button class="btn btn-primary" style="margin-top: 3%;" value="Atualizar">Atualizar</button>
         </form>
 
     </div>
-
-    <script src="/js/cadastroAluno.js"></script>
 
 </body>
 
