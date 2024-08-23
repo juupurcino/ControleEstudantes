@@ -1,0 +1,35 @@
+
+.max-width {
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+
+.max-width label {
+    margin: 0;
+}
+
+.image-container {
+    margin-top: 2em;
+    display: flex;
+    justify-content: center;
+}
+
+#imgFoto {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px solid black;
+    cursor: pointer;
+    object-fit: cover;
+    object-position: center;
+}
+
+#imgFoto:hover {
+    opacity: .7;
+    transition: 1;
+}
+
+input[type='file'] {
+    display: none;
+}

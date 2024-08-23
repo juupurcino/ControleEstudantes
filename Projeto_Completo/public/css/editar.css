@@ -1,0 +1,46 @@
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background: #f2f4f8;
+}
+
+main {
+    margin-top: 5em;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.edit-box {
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    padding: 1rem;
+    margin: 2em;
+}
+
+label {
+    margin-top: 1em;
+}
+
+.user-box input, select{
+    width: 100%;
+    padding: 0.5em;
+    margin-top: 0.25rem;
+    display: block;
+}
+
+#submit {
+    font-weight: bold;
+    margin-top: 2em;
+    width: 30%;
+}
+
+#excluir {
+    font-weight: bold;
+    margin-top: 2em;
+    float: right;
+    width: 30%;
+}
