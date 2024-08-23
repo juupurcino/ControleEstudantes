@@ -42,7 +42,7 @@
     <div class="mb-3 at" style="margin: 0%;">
       <form action="/" method="post">
         <select id="sala" onchange="this.form.submit()" name="nome" class="form-select" required>
-          <option aria-hidden="">Selecione uma sala</option>
+          <option value="">Selecione uma sala</option>
           <% for (let i=0; i < salas.length; i++) { %>
             <option value='<%= salas[i].IDSala %>' <%=id==salas[i].IDSala ? 'selected' : '' %>>
               <%= salas[i].Nome %>
@@ -53,7 +53,7 @@
     </div>
 
       <form action="/editarSala/<%= id%>" method="get" style="display:inline;">
-        <button class="btn btn-secondary" id="editarSala" name="editarSala">Editar</button>
+        <button class="btn btn-secondary" id="editarSala" name="editarSala" <%= !id? 'hidden' : ' '%>>Editar</button>
       </form>
   </div>
 
@@ -64,7 +64,7 @@
 
   <div>
 
-      
+    <h6 style="display: flex; justify-content: center;" <%= !id? 'hidden' : ' '%>>Quantidade de vagas disponíveis: <%=totalVagas%></h6>
 
   </div>
 

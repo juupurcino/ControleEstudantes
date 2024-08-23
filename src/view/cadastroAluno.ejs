@@ -72,7 +72,7 @@
             <div class="mb-3">
                 <select id="disabledSelect" class="form-select" id="sala" name="sala" required>
                     <% for (let i=0; i<salas.length; i++) { %>
-                        <option value='<%= salas[i].IDSala %>'>
+                        <option value="<%= totalVagas >= salaEsp.Capacidade ? salas[i].IDSala : "" %>">
                             <%= salas[i].Nome %>
                         </option>
                         <% } %>

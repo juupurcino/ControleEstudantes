@@ -15,7 +15,7 @@ module.exports = {
             attributes: ['IDAluno', 'Nome', 'Idade', 'Foto']
         });
 
-        res.render('../view/index', { salas, alunos, id: '' });
+        res.render('../view/index', { salas, alunos, id: '', totalVagas: ''});
     },
 
     async pagInicialPost(req, res) {
@@ -25,7 +25,7 @@ module.exports = {
         const alunos = await aluno.findAll({
             raw: true,
             attributes: ['IDAluno', 'Nome', 'Idade', 'Foto'],
-            where: { IDSala: id }
+            where: (id ? { IDSala: id } : {}) 
         });
 
         const salas = await sala.findAll({
@@ -33,6 +33,19 @@ module.exports = {
             attributes: ['IDSala', 'Nome']
         });
 
-        res.render('../view/index', { salas, alunos, id });
+
+        const salaEsp = await sala.findByPk(id, {
+            raw: true, //Retorna os somente os valores de uma tabela, sem os metadados
+            attributes: ['Capacidade']
+        });
+        
+        let totalVagas = 0;
+
+        if (salaEsp) {
+            
+            totalVagas = salaEsp.Capacidade - alunos.length;
+        }
+
+        res.render('../view/index', { salas, alunos, id, totalVagas });
     }
 }
